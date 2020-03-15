@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>React Assignemnt</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="style/style.css">
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script> 
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin> </script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                crossorigin="anonymous"></script>
+        
+    </head>
+
+    <body>
+        <div class="pageContainer">
+            <div id="portfolioGallery">
+        </div>
+    </div>
+
+
+
+
+
+        <script type="text/babel">
+        //render thumbnails
+            const thumbGallery = document.getElementById('portfolioGallery');
+            const thumbnails = [
+                {name:"Starving", size:"2", img:"assets/pool_thumbnail/starving-c.png"},
+                {name:"still to life", size:"1", img:"assets/pool_thumbnail/still to life-c copy.png"},
+                {name:"12 Principles of Animation", size:"1", img:"assets/pool_thumbnail/12principle-1.gif"},
+                {name:"Squares", size:"2", img:"assets/pool_thumbnail/squares.png"},
+                {name:"Form", size:"2", img:"assets/pool_thumbnail/sound-c.png"},
+                {name:"liquid Animation", size:"1", img:"assets/pool_thumbnail/liquidanimation.gif"},
+                {name:"Ader", size:"1", img:"assets/pool_thumbnail/adlerplanetarium-c.png"},
+                {name:"Chicago Memory", size:"2", img:"assets/pool_thumbnail/chicagomemory-2-c.png"}
+                
+            ];
+            
+            let padding = 5;
+            let sizeUnit = ($('.pageContainer').width() - padding * 4) / 3;
+            
+            const ProjectThumb = ({pool}) => (
+                pool.map((i) =>
+                    <div className="thumb-container" style={{width: i.size * sizeUnit}} key={i.name}>
+                        <img src={i.img}/>
+                    </div>
+                )
+            );
+
+            ReactDOM.render(
+                <ProjectThumb  pool={thumbnails}/>,
+                thumbGallery
+            );
+ 
+        </script>
+    </body>
+</html>

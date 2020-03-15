@@ -1,0 +1,34 @@
+$primary: rgb(26,28,30);
+$white:rgb(240,240,240);
+
+body{
+    background: $primary;
+}
+
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.pageContainer{
+    margin: auto;
+    width:100%;
+    max-width:1280px;
+    // background-color: red;
+    font-size:0;
+}
+
+.thumb-container{
+    overflow: hidden;
+    display: inline-block;
+    margin:5px;
+}
+
+.thumb-container > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+

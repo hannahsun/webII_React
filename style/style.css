@@ -1,0 +1,31 @@
+body {
+  background: #1a1c1e;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.pageContainer {
+  margin: auto;
+  width: 100%;
+  max-width: 1280px;
+  font-size: 0;
+}
+
+.thumb-container {
+  overflow: hidden;
+  display: inline-block;
+  margin: 5px;
+}
+
+.thumb-container > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
